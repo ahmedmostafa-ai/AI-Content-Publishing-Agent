@@ -45,8 +45,8 @@ flowchart LR
     D --> E[Tab 2<br/>Review · edit · pick channels]
     E --> F{Explicit approval?}
     F -- no --> G[Blocked<br/>no HTTP call]
-    F -- yes --> H[approve&#40;&#41;<br/>locks SHA-256 hash]
-    H --> I[publish&#40;&#41;<br/>re-verifies status + hash]
+    F -- yes --> H["approve()<br/>locks SHA-256 hash"]
+    H --> I["publish()<br/>re-verifies status + hash"]
     I --> J[Mock publishing API<br/>WordPress · LinkedIn · X]
     J --> K[(publications<br/>status · URL · version · error)]
     K --> L[Tab 3<br/>Publication log + CSV]
